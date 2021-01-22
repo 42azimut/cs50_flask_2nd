@@ -12,3 +12,4 @@
 
     `source myvenv/bin/activate`
 
+- .gitignore
