@@ -21,3 +21,7 @@
 - `git commit -m "msg`
 
 - `git push`
+
+
+### requrietments.txt 
+- `pip install -r requirements.txt`
