@@ -13,3 +13,11 @@
     `source myvenv/bin/activate`
 
 - .gitignore
+
+
+### github 폴더 삭제하기
+- `git rm -r cached removeDir`
+
+- `git commit -m "msg`
+
+- `git push`
