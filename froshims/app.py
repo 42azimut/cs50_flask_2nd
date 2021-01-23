@@ -1,7 +1,9 @@
+from cs50 import SQL
 from flask import Flask, redirect, render_template, request
 
 app = Flask(__name__)
 
+db = SQL("sqlite:///froshims.db")
 
 SPORTS = [
     "Dodgeball",
@@ -26,8 +28,11 @@ def register():
     if sport not in SPORTS:
         return render_template("error.html", message="Invalid sport")
     
+    db.execute("INSERT INTO registrants (name, sport) VALUES(?, ?)", name, sport)
+
     return redirect("/registrants")
 
 @app.route('/registrants')
 def registrants():
-    return render_template("registrants.html", registrants=REGISTRANTS)
+    registrants = db.execute("SELECT * FROM registrants")
+    return render_template("registrants.html", registrants=registrants)

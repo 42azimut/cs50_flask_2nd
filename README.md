@@ -25,3 +25,6 @@
 
 ### requrietments.txt 
 - `pip install -r requirements.txt`
+
+### CS50 SQLAlchemy ..  install
+- `pip install cs50`
